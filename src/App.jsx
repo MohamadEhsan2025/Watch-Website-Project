@@ -40,7 +40,7 @@ const cartButton =(clocks)=>{
 
 
 
-// const darkModeButoon = darkMode ?" bg-white" : "bg-black";
+
 
 
   return (
@@ -50,26 +50,27 @@ const cartButton =(clocks)=>{
 
 
 
-      <div className={darkMode ? "bg-gray-900 text-white" :" bg-white text-black"  }>
-  <div className="flex justify-between w-[100%] h-[50%]" >
+      <div className={`${darkMode ? "bg-gray-900 text-white" :"bg-white         text-black" } flex justify-between items-center px-4 py-3`} >
       
 
 
                 {/* this is NavBar */}
                    
-                        <div className="w-[48%] flex justify-between ">
+                        <div className="flex items-center gap-6 ">
                                 
-                                <div className="flex text-black gap-2 "> <img src="src/images/bxs.png" /><p> Rolex </p></div>
-                                <p className='text-amber-600'> Home </p>
-                                <p> Featured </p>
-                                <p>Products</p>
-                                <p> New </p>
-                                 
+                                <div className="flex items-center gap-2 "> <img src="src/images/bxs.png"
+                                 className='w-6 h-6' /><p className='font-bold'> Rolex </p></div>
+                                 <nav className='hidden md:flex gap-6'>
+                                <p className='text-amber-600 cursor-pointer'> Home </p>
+                                <p className='cursor-pointer'> Featured </p>
+                                <p className='cursor-pointer'>Products</p>
+                                <p className='cursor-pointer'>New </p>
+                                 </nav>
                             </div>
                         
-                   <div className=" mx-[40px]  w-[20%] flex justify-end gap-7  z-20">
-                       <button className="cursor-pointer hover:bg-yellow-200 " onClick={() => setDarkMode(!darkMode)} > <img src="src/images/Dark.png" /></button> 
-                       <button className="cursor-pointer hover:bg-yellow-200"> <img src="src/images/Vector.png" /> </button> 
+                   <div className=" flex gap-5">
+                       <button className="cursor-pointer hover:bg-yellow-200 p-1 rounded" onClick={() => setDarkMode(!darkMode)} > <img src="src/images/Dark.png" className='w-6 h-6'/></button> 
+                       <button className="cursor-pointer hover:bg-yellow-200 p-1"> <img src="src/images/Vector.png"  className='h-6 w-6'/> </button> 
                   </div>
 
                         </div>  
@@ -78,7 +79,7 @@ const cartButton =(clocks)=>{
 
             {/* this is headline part */}
 
-            <div className="flex">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 ">
             <div className=" w-[50%] h-[50%] my-[150px]">
 
                 
@@ -94,10 +95,16 @@ const cartButton =(clocks)=>{
                                 <button className="bg-black text-amber-50 w-36 h-17 my-[-4px]"> ADD TO CART</button>
                             </div>
                   
-                    
+                     
                         </div> 
 
-        <div className='mx-200 my-[-100px] w-[90%] h-[100%] absolute'><img src="src/images/Home.png" className="h-[80%] mt-19 w-[400px] relative"></img></div>
+<div className="flex justify-center items-center w-full md:w-1/2 relative">
+  <img
+    src="src/images/Home.png"
+    className="w-56 sm:w-72 md:w-96 lg:w-[400px] h-auto"
+    alt="Home Watch"
+  />
+</div>
 
       </div></div>
 
@@ -130,24 +137,34 @@ const cartButton =(clocks)=>{
             <div className="flex w-[100%] h-[50%] ">
 
 
-                <div className="w-[50%] ">
-                    <img src="src/images/story.png " className="p-12 absolute my-[-70px] left-[130px]" />
-                    <img src="src/images/back.png" className="p-12" />
+                 <div className="p-4 ml-20 mt-2 mr-3 h-[400px] w-[56%] ">
 
+                <div className="w-[75%] h-[100%] mx-2">
+                  <img src="src/images/image2.png" alt="extra" className="
+                  w-[100%] h-[100%] " />
                 </div>
+             
+        </div>
 
 
 
+<div className="w-full md:w-1/2 text-center md:text-left px-4 md:px-8">
+  <p className="mt-10 md:mt-20 font-bold text-lg md:text-xl">OUR STORY</p>
 
-                <div className=" w-[50%]" >
-                    
-                    <p className="m-10 mt-20 font-bold text-xl items-start"> OUR STORY</p>
-                    <p className="text-4xl font-bold m-3"> Inspiration Watch of<br /> this year</p>
-                    <p className="m-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                    Reiciendis illo repudiandae eius aperiam beatae ipsa?</p>
+  <p className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
+    Inspiration Watch of <br /> this year
+  </p>
 
-                  <button className="mb-3 bg-gray-800 text-white w-23 h-10 shadow-2xl shadow-gray-600"> Discover</button>
-                </div>
+  <p className="mt-6 text-gray-600 dark:text-gray-300">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br className="hidden sm:block" />
+    Reiciendis illo repudiandae eius aperiam beatae ipsa?
+  </p>
+
+  <button className="mt-6 bg-gray-800 text-white px-6 py-2 rounded shadow-lg hover:bg-gray-700">
+    Discover
+  </button>
+</div>
+
 
             </div>
             
@@ -170,7 +187,7 @@ const cartButton =(clocks)=>{
       <Products />
       <ClockPart2 />
       </div>
-      </div>
+      
     </>
   )
 }
