@@ -182,7 +182,7 @@ const cartButton =(clocks)=>{
                 ))}
               </div>
 
-
+.
 
       <Products />
       <ClockPart2 />
