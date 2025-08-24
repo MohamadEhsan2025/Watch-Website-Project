@@ -1,2 +1,1 @@
-# Watch-website-using-React
-my first project i React
+This is the combined README for Watch-Project
