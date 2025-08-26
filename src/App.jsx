@@ -53,7 +53,7 @@ const cartButton =(clocks)=>{
       <div className={`${darkMode ? "bg-gray-900 text-white" :"bg-white         text-black" } flex justify-between items-center px-4 py-3`} >
       
 
-
+0
                 {/* this is NavBar */}
                    
                         <div className="flex items-center gap-6 ">
