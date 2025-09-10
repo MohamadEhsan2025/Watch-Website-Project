@@ -35,31 +35,31 @@ export default function Weather() {
 
       <div className="bg-blue-700 absolute h-[190px] p-5 w-[200px] m-[300px] my-[70px] rounded-2xl text-amber-50">
 
-    {weather && (
-            <div>
-                <p className="font-bold"> Today</p>
+        {weather && (
+          <div>
+            <p className="font-bold"> Today</p>
             <div className="ml-[50px]">
-                <img src={weather.current.condition.icon} alt="icon" />
+              <img src={weather.current.condition.icon} alt="icon" />
             </div>
             <p className="font-bold">{weather.location.name}</p>
-            
+
             <p>{weather.current.temp_c}°C</p>
-            </div>
+          </div>
         )}
       </div>
-    
 
-  <div
-    className="bg-[url('src/images/kab.jpg')] bg-cover bg-center h-[400px] w-full flex pl-10 p-20 gap-5 text-white"
-  >
-    <h1 className="text-2xl font-bold">Kabul Forecast</h1>
-  </div>
+
+      <div
+        className="bg-[url('src/images/kab.jpg')] bg-cover bg-center h-[400px] w-full flex pl-10 p-20 gap-5 text-white"
+      >
+        <h1 className="text-2xl font-bold">Kabul Forecast</h1>
+      </div>
 
 
 
       {/* Forecast */}
-   <div className="bg-[url('src/images/herat1.jpg')] flex pl-10 p-20 gap-5 text-white my-[10px]">
- <h1 className="text-2xl font-bold">Herat Forecast</h1>
+      <div className="bg-[url('src/images/herat1.jpg')] flex pl-10 p-20 gap-5 text-white my-[10px]">
+        <h1 className="text-2xl font-bold">Herat Forecast</h1>
 
 
         {forecast &&
@@ -83,4 +83,3 @@ export default function Weather() {
     </>
   );
 }
-.
